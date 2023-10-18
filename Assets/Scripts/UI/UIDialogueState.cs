@@ -103,6 +103,7 @@ public class UIDialogueState : UIBaseState
 
     public void VerifyQuest()
     {
+        currentStory.variablesState["questCompleted"] = npcControllerCmp.CheckPlayerForQuestItem();
         Debug.Log("Verifying Quest");
     }
 }

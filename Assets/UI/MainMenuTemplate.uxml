@@ -1,8 +1,8 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Global%20Stylesheet.uss?fileID=7433441132597879392&amp;guid=52ff2e3acea9e0143b5ae025e1f1e57f&amp;type=3#Global Stylesheet" />
-    <ui:VisualElement name="main-menu-container" class="center" style="-unity-font: url(&apos;project://database/Assets/Game%20Assets/Fonts/OdibeeSans-Regular.ttf?fileID=12800000&amp;guid=94c91e133c0f88c438ef55128a1cd703&amp;type=3#OdibeeSans-Regular&apos;); -unity-font-definition: none; font-size: 32px; color: rgb(255, 255, 255); -unity-text-align: upper-center; display: none; visibility: hidden;">
+    <ui:VisualElement name="main-menu-container" class="center" style="-unity-font: url(&apos;project://database/Assets/Game%20Assets/Fonts/OdibeeSans-Regular.ttf?fileID=12800000&amp;guid=94c91e133c0f88c438ef55128a1cd703&amp;type=3#OdibeeSans-Regular&apos;); -unity-font-definition: none; font-size: 32px; color: rgb(255, 255, 255); -unity-text-align: upper-center; display: none; visibility: visible;">
         <ui:VisualElement name="box" class="primary-container">
-            <ui:Label tabindex="-1" text="Mystic Odyssey" display-tooltip-when-elided="true" class="base-text" style="font-size: 80px; -unity-text-align: upper-center;" />
+            <ui:Label tabindex="-1" text="Mystic Odyssey" display-tooltip-when-elided="true" class="base-text" style="font-size: 80px; -unity-text-align: upper-center; visibility: visible; color: rgb(0, 21, 42);" />
             <ui:VisualElement name="buttons" style="position: absolute; left: 0; bottom: -50px; width: 100%; flex-direction: row; justify-content: center;">
                 <ui:Button text="Start" display-tooltip-when-elided="true" name="start-button" class="menu-button" />
             </ui:VisualElement>

@@ -7,7 +7,6 @@ public class NPCController : MonoBehaviour
     public TextAsset inkJSON;
     public QuestItemSO desiredQuestItem;
     private Canvas canvasCmp;
-
     public bool hasQuestItem = false;
 
     private void Awake()
@@ -39,5 +38,14 @@ public class NPCController : MonoBehaviour
         }
         EventManager.RaiseTreasureChestUnlocked(inkJSON, gameObject);
     }
+
+    public bool CheckPlayerForQuestItem()
+    {
+        if(hasQuestItem) return true;
+        Inventory inventoryCmp = GameObject.FindGameObjectWithTag(
+            Constants.PLAYER_TAG
+        ).GetComponent<Inventory>();
+        return inventoryCmp.HasItem(desiredQuestItem);
+     }
 
 }
