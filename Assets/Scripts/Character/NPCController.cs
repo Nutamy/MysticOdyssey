@@ -45,7 +45,8 @@ public class NPCController : MonoBehaviour
         Inventory inventoryCmp = GameObject.FindGameObjectWithTag(
             Constants.PLAYER_TAG
         ).GetComponent<Inventory>();
-        return inventoryCmp.HasItem(desiredQuestItem);
+        hasQuestItem = inventoryCmp.HasItem(desiredQuestItem);
+        return hasQuestItem;
      }
 
 }

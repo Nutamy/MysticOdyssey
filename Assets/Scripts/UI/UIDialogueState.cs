@@ -45,6 +45,11 @@ public class UIDialogueState : UIBaseState
         
         npcControllerCmp = npc.GetComponent<NPCController>();
 
+        if (npcControllerCmp.hasQuestItem)
+        {
+            currentStory.ChoosePathString("postCompletion");
+        }
+
         UpdateDialogue();
     }
 
