@@ -1,0 +1,42 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Global%20Stylesheet.uss?fileID=7433441132597879392&amp;guid=52ff2e3acea9e0143b5ae025e1f1e57f&amp;type=3#Global Stylesheet" />
+    <ui:VisualElement name="main-menu-container" class="center" style="-unity-font: url(&apos;project://database/Assets/Game%20Assets/Fonts/OdibeeSans-Regular.ttf?fileID=12800000&amp;guid=94c91e133c0f88c438ef55128a1cd703&amp;type=3#OdibeeSans-Regular&apos;); -unity-font-definition: none; font-size: 32px; color: rgb(255, 255, 255); -unity-text-align: upper-center; display: none; visibility: hidden;">
+        <ui:VisualElement name="box" class="primary-container">
+            <ui:Label tabindex="-1" text="Mystic Odyssey" display-tooltip-when-elided="true" class="base-text" style="font-size: 80px; -unity-text-align: upper-center;" />
+            <ui:VisualElement name="buttons" style="position: absolute; left: 0; bottom: -50px; width: 100%; flex-direction: row; justify-content: center;">
+                <ui:Button text="Start" display-tooltip-when-elided="true" name="start-button" class="menu-button" />
+            </ui:VisualElement>
+            <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Game%20Assets/Sprites/Bombs.png?fileID=2800000&amp;guid=4420e8d6e00706f4f84dad51b2169cb1&amp;type=3#Bombs&apos;); width: 450px; height: 232px; position: absolute; top: -202px; left: 140px;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="player-info-container" style="position: absolute; left: 50px; top: 50px; flex-direction: row; display: none;">
+        <ui:VisualElement class="stat-container">
+            <ui:Label tabindex="-1" text="Health" display-tooltip-when-elided="true" class="stat-name" style="color: rgb(255, 255, 255);" />
+            <ui:Label tabindex="-1" text="000" display-tooltip-when-elided="true" name="health-label" class="stat-value" />
+        </ui:VisualElement>
+        <ui:VisualElement class="stat-container">
+            <ui:Label tabindex="-1" text="Potions" display-tooltip-when-elided="true" class="stat-name" style="color: rgb(255, 255, 255);" />
+            <ui:Label tabindex="-1" text="000" display-tooltip-when-elided="true" name="potions-label" class="stat-value" />
+        </ui:VisualElement>
+        <ui:VisualElement name="quest-item-icon" style="width: 60px; height: 60px; background-image: url(&apos;project://database/Assets/Game%20Assets/Sprites/Quest%20Item.png?fileID=2800000&amp;guid=82f427d1fad0fe5459bae6dfe603876a&amp;type=3#Quest Item&apos;); display: none;" />
+    </ui:VisualElement>
+    <ui:VisualElement name="dialogue-container" style="display: none; visibility: visible; overflow: visible; justify-content: flex-start; bottom: 50px; left: 0; position: absolute; width: 100%;">
+        <ui:VisualElement class="primary-container">
+            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="dialogue-text" class="base-text" style="font-size: 42px; color: rgb(118, 62, 62); -unity-font-style: normal; -unity-text-outline-width: 0;" />
+            <ui:Button text="Next" display-tooltip-when-elided="true" name="dialogue-next-button" class="menu-button" style="position: absolute; right: 50px; bottom: -40px; display: flex;" />
+            <ui:VisualElement name="choices-group" style="flex-direction: row; position: absolute; right: 50px; bottom: -40px; display: flex; flex-wrap: nowrap; flex-shrink: 1; flex-grow: 0; flex-basis: auto; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; opacity: 1; width: auto;">
+                <ui:Button text="Yes" display-tooltip-when-elided="true" name="yes-button" class="menu-button" style="font-size: 32px; bottom: auto; flex-direction: column; right: auto; position: relative; -unity-text-align: upper-center; -unity-font: url(&apos;project://database/Assets/Game%20Assets/Fonts/OdibeeSans-Regular.ttf?fileID=12800000&amp;guid=94c91e133c0f88c438ef55128a1cd703&amp;type=3#OdibeeSans-Regular&apos;); -unity-font-definition: none;" />
+                <ui:Button text="No" display-tooltip-when-elided="true" name="no-button" class="menu-button" style="bottom: auto; flex-direction: column; right: auto; top: auto; left: auto; position: relative; -unity-text-align: upper-center; -unity-font: url(&apos;project://database/Assets/Game%20Assets/Fonts/OdibeeSans-Regular.ttf?fileID=12800000&amp;guid=94c91e133c0f88c438ef55128a1cd703&amp;type=3#OdibeeSans-Regular&apos;); -unity-font-definition: none;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="quest-item-container" style="width: 100%; height: 100%; justify-content: space-around; align-items: center; display: none;">
+        <ui:VisualElement class="primary-container" style="align-items: center;">
+            <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Game%20Assets/Sprites/Paper%20BG.png?fileID=2800000&amp;guid=b1aa48f59209ca54f8ad1e5966d3e81d&amp;type=3#Paper BG&apos;); width: 350px; height: 350px; align-items: center;">
+                <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Game%20Assets/Sprites/Quest%20Item%20Large.png?fileID=2800000&amp;guid=44d1dd07413f62049b0e1c783060a46b&amp;type=3#Quest Item Large&apos;); width: 250px; height: 250px;" />
+                <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="quest-item-label" class="base-text" style="font-size: 42px; -unity-text-align: upper-center; margin-top: 30px; color: rgb(198, 6, 121); -unity-font-style: bold-and-italic;" />
+                <ui:Button text="Claim" display-tooltip-when-elided="true" class="menu-button" style="position: absolute; bottom: -140px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
