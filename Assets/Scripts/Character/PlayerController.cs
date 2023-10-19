@@ -5,6 +5,11 @@ public class PlayerController : MonoBehaviour
     public CharacterStatsSO stats;
     private Health healthCmp;
     private Combat combatCmp;
+    private GameObject axeWeapon;
+    private GameObject swordWeapon;
+
+    public Weapons weapon = Weapons.Axe;
+    
 
     private void Awake()
     {
@@ -14,6 +19,18 @@ public class PlayerController : MonoBehaviour
         }
         healthCmp = GetComponent<Health>();
         combatCmp = GetComponent<Combat>();
+        axeWeapon = GameObject.FindGameObjectWithTag(Constants.AXE_TAG);
+        swordWeapon = GameObject.FindGameObjectWithTag(Constants.SWORD_TAG);
+    }
+
+    private void OnEnable()
+    {
+        EventManager.OnReward += HandleReward;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnReward -= HandleReward;
     }
 
     private void Start()
@@ -22,5 +39,36 @@ public class PlayerController : MonoBehaviour
         combatCmp.damage = stats.damage;
 
         EventManager.RaiseChangePlayerHealth(healthCmp.healthPoints);
+        SetWeapon();
+    }
+
+    private void HandleReward(RewardSO reward)
+    {
+        healthCmp.healthPoints += reward.bonusHealth;
+        healthCmp.potionCount += reward.bonusPotions;
+        combatCmp.damage += reward.bonusDamage;
+
+        EventManager.RaiseChangePlayerHealth(healthCmp.healthPoints);
+        EventManager.RaiseChangePlayerPotions(healthCmp.potionCount);
+        if (reward.forceWeaponSwap)
+        {
+            weapon = reward.weapon;
+            SetWeapon();
+        }
+        
+    }
+
+    private void SetWeapon()
+    {
+        if (weapon == Weapons.Axe)
+        {
+            axeWeapon.SetActive(true);
+            swordWeapon.SetActive(false);
+        }
+        else
+        {
+            axeWeapon.SetActive(false);
+            swordWeapon.SetActive(true);
+        }
     }
 }

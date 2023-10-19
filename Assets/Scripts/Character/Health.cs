@@ -9,7 +9,7 @@ public class Health : MonoBehaviour
     public event UnityAction OnStartDefeated = () => { };
     [NonSerialized] public float healthPoints = 0f;
     [NonSerialized] public Slider sliderCmp;
-    [SerializeField] private int potionCount = 1;
+    public int potionCount = 1;
     [SerializeField] private float healAmount = 15f;
     private Animator animatorCmp;
     private BubbleEvent bubbleEventCmp;    
@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
 
     private void Awake()
     {
-        EventManager.UpdateChangePlayerPotions(potionCount);
+        EventManager.RaiseChangePlayerPotions(potionCount);
         animatorCmp = GetComponentInChildren<Animator>();
         bubbleEventCmp = GetComponentInChildren<BubbleEvent>();
         sliderCmp = GetComponentInChildren<Slider>();
@@ -80,6 +80,6 @@ public class Health : MonoBehaviour
         healthPoints += healAmount;
 
         EventManager.RaiseChangePlayerHealth(healthPoints);
-        EventManager.UpdateChangePlayerPotions(potionCount);
+        EventManager.RaiseChangePlayerPotions(potionCount);
     }
 }

@@ -7,11 +7,13 @@ public class NPCController : MonoBehaviour
     public TextAsset inkJSON;
     public QuestItemSO desiredQuestItem;
     private Canvas canvasCmp;
+    private Reward rewardCmp;
     public bool hasQuestItem = false;
 
     private void Awake()
     {
         canvasCmp = GetComponentInChildren<Canvas>();
+        rewardCmp = GetComponent<Reward>();
     }
 
     private void OnTriggerEnter()
@@ -46,6 +48,10 @@ public class NPCController : MonoBehaviour
             Constants.PLAYER_TAG
         ).GetComponent<Inventory>();
         hasQuestItem = inventoryCmp.HasItem(desiredQuestItem);
+        if (rewardCmp != null && hasQuestItem)
+        {
+            rewardCmp.SendReward();
+        }
         return hasQuestItem;
      }
 

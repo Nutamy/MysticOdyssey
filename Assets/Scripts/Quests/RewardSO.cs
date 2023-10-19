@@ -3,8 +3,8 @@ using System.IO.Enumeration;
 using UnityEngine;
 
 [CreateAssetMenu(
-    fileName = "Reward Item",
-    menuName = "RPG/Reward Item SO",
+    fileName = "Reward",
+    menuName = "RPG/Reward SO",
     order = 2
 )]
 public class RewardSO : ScriptableObject

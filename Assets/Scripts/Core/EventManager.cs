@@ -8,11 +8,12 @@ public static class EventManager
     public static event UnityAction<TextAsset, GameObject> OnInitiateDialogue;
     public static event UnityAction<QuestItemSO> OnTreasureChestUnlocked;
     public static event UnityAction<bool> OnToggleUI;
+    public static event UnityAction<RewardSO> OnReward;
 
     public static void RaiseChangePlayerHealth(float newHealthPoints) =>
         OnChangePlayerHealth?.Invoke(newHealthPoints);
 
-    public static void UpdateChangePlayerPotions(int newPotions) =>
+    public static void RaiseChangePlayerPotions(int newPotions) =>
         OnChangePlayerPotions?.Invoke(newPotions);
 
     public static void RaiseTreasureChestUnlocked(TextAsset inkJSON, GameObject npc) =>
@@ -23,5 +24,8 @@ public static class EventManager
 
     public static void RiseTiggleUI(bool isOpened) =>
         OnToggleUI?.Invoke(isOpened);
+
+    public static void RaiseReward(RewardSO reward) =>
+        OnReward?.Invoke(reward);
 
 }
