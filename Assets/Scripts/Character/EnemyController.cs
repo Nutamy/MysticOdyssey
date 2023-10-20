@@ -88,11 +88,6 @@ public class EnemyController : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, chaseRange);
     }
 
-    public void Attack()
-    {
-        //Debug.Log("Attacking");
-    }
-
     private void HandleStartDefeated()
     {
         SwitchState(defeatState);

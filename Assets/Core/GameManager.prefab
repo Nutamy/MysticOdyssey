@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6178584224104612410}
   - component: {fileID: 3525709824834537461}
+  - component: {fileID: 2124492778336448519}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: GameManager
@@ -106,3 +107,15 @@ MonoBehaviour:
   m_DefaultActionMap: Gameplay
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &2124492778336448519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8936872421564247661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 129ab231ea93d3642a75a092643cc961, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

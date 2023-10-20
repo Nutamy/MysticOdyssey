@@ -12,7 +12,6 @@ public class AIReturnState : AIBaseState
             targetPosition = enemy.patrolCmp.GetNextPosition();
 
             enemy.movementCmp.MoveAgentByDestination(targetPosition);
-            // enemy.SwitchState(enemy.patrolState);
         }
         else
         {

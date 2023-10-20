@@ -12,7 +12,6 @@ public class UIMainMenuState : UIBaseState
             .Query<Button>(null, "menu-button")
             .ToList();
         controller.buttons[0].AddToClassList("active");
-        Debug.Log("controller.buttons.Count" + controller.buttons.Count);
     }
 
     public override void SelectButton()

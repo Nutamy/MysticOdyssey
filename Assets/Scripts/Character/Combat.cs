@@ -76,7 +76,6 @@ public class Combat : MonoBehaviour
 
     public void CancelAttack()
     {
-        Debug.Log("CancelAttack");
         animatorCmp.ResetTrigger(Constants.ATTACK_ANIMATOR_PARAM);
     }
 

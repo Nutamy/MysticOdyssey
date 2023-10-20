@@ -1,10 +1,11 @@
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     public CharacterStatsSO stats;
-    private Health healthCmp;
-    private Combat combatCmp;
+    [NonSerialized] public Health healthCmp;
+    [NonSerialized] public Combat combatCmp;
     private GameObject axeWeapon;
     private GameObject swordWeapon;
 
@@ -35,6 +36,10 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
+        if (PlayerPrefs.HasKey("Health"))
+        {
+            print("Save data found!");
+        }
         healthCmp.healthPoints = stats.health;
         combatCmp.damage = stats.damage;
 

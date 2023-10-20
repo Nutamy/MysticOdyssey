@@ -52,7 +52,6 @@ public class Health : MonoBehaviour
         {
             Defeated();
         }
-        print(healthPoints + " points");
     }
 
     private void Defeated()
