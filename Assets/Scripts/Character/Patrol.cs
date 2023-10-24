@@ -27,7 +27,6 @@ public class Patrol : MonoBehaviour
         splineCmp = splineGameObject.GetComponent<SplineContainer>();
         splineLength = splineCmp.CalculateLength();
         agentCmp = GetComponent<NavMeshAgent>();
-        print(splineLength);
     }
 
     public Vector3 GetNextPosition()

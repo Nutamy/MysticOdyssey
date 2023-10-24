@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,7 +9,6 @@ public class PlayerController : MonoBehaviour
     [NonSerialized] public Combat combatCmp;
     private GameObject axeWeapon;
     private GameObject swordWeapon;
-
     public Weapons weapon = Weapons.Axe;
     
 
@@ -38,10 +38,21 @@ public class PlayerController : MonoBehaviour
     {
         if (PlayerPrefs.HasKey("Health"))
         {
-            print("Save data found!");
+            healthCmp.healthPoints = PlayerPrefs.GetFloat("Health");
+            healthCmp.potionCount = PlayerPrefs.GetInt("Potions");
+            combatCmp.damage = PlayerPrefs.GetFloat("Damage");
+            weapon = (Weapons)PlayerPrefs.GetInt("Weapon");
+
+            NavMeshAgent agentCmp = GetComponent<NavMeshAgent>();
+            Portal portalCmp = FindObjectOfType<Portal>();
+            agentCmp.Warp(portalCmp.spawnPoint.position);
+            transform.rotation = portalCmp.spawnPoint.rotation;
         }
-        healthCmp.healthPoints = stats.health;
-        combatCmp.damage = stats.damage;
+        else
+        {
+            healthCmp.healthPoints = stats.health;
+            combatCmp.damage = stats.damage;
+        }
 
         EventManager.RaiseChangePlayerHealth(healthCmp.healthPoints);
         SetWeapon();

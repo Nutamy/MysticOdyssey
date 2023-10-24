@@ -69,7 +69,6 @@ public class Combat : MonoBehaviour
             if (CompareTag(target.transform.tag)) continue;
             Health healthCmp = target.transform.gameObject.GetComponent<Health>();
             if (healthCmp == null) continue;
-            print(target.transform.name);
             healthCmp.TakeDamage(damage);
         }        
     }

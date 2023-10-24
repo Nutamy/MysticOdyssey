@@ -14187,23 +14187,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3716672131718424767, guid: 8273785e63e41e545b833c06d57d7480, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.465744
+      value: -2.4767423
       objectReference: {fileID: 0}
     - target: {fileID: 3716672131718424767, guid: 8273785e63e41e545b833c06d57d7480, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5254734
+      value: 2.1186628
       objectReference: {fileID: 0}
     - target: {fileID: 3716672131718424767, guid: 8273785e63e41e545b833c06d57d7480, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.029581
+      value: -8.508031
       objectReference: {fileID: 0}
     - target: {fileID: 3716672131718424767, guid: 8273785e63e41e545b833c06d57d7480, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.92387956
+      value: 0.9848078
       objectReference: {fileID: 0}
     - target: {fileID: 3716672131718424767, guid: 8273785e63e41e545b833c06d57d7480, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.38268343
+      value: 0.17364816
       objectReference: {fileID: 0}
     - target: {fileID: 3716672131718424767, guid: 8273785e63e41e545b833c06d57d7480, type: 3}
       propertyPath: m_LocalRotation.y
@@ -14215,19 +14215,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3716672131797763035, guid: 8273785e63e41e545b833c06d57d7480, type: 3}
       propertyPath: m_CameraDistance
-      value: 1.6584986
+      value: 2.8101425
       objectReference: {fileID: 0}
     - target: {fileID: 3716672131797763035, guid: 8273785e63e41e545b833c06d57d7480, type: 3}
       propertyPath: m_TrackedObjectOffset.x
-      value: 0.004256119
+      value: -0.0067421994
       objectReference: {fileID: 0}
     - target: {fileID: 3716672131797763035, guid: 8273785e63e41e545b833c06d57d7480, type: 3}
       propertyPath: m_TrackedObjectOffset.y
-      value: 0.7527375
+      value: 0.55753756
       objectReference: {fileID: 0}
     - target: {fileID: 3716672131797763035, guid: 8273785e63e41e545b833c06d57d7480, type: 3}
       propertyPath: m_TrackedObjectOffset.z
-      value: -0.6068455
+      value: -0.6173611
       objectReference: {fileID: 0}
     - target: {fileID: 3716672133071695338, guid: 8273785e63e41e545b833c06d57d7480, type: 3}
       propertyPath: m_Follow
@@ -14243,23 +14243,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3716672133071695339, guid: 8273785e63e41e545b833c06d57d7480, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.465744
+      value: -2.4767423
       objectReference: {fileID: 0}
     - target: {fileID: 3716672133071695339, guid: 8273785e63e41e545b833c06d57d7480, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5254734
+      value: 2.1186628
       objectReference: {fileID: 0}
     - target: {fileID: 3716672133071695339, guid: 8273785e63e41e545b833c06d57d7480, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.029581
+      value: -8.508031
       objectReference: {fileID: 0}
     - target: {fileID: 3716672133071695339, guid: 8273785e63e41e545b833c06d57d7480, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.92387956
+      value: 0.9848078
       objectReference: {fileID: 0}
     - target: {fileID: 3716672133071695339, guid: 8273785e63e41e545b833c06d57d7480, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.38268343
+      value: 0.17364816
       objectReference: {fileID: 0}
     - target: {fileID: 3716672133071695339, guid: 8273785e63e41e545b833c06d57d7480, type: 3}
       propertyPath: m_LocalRotation.y
@@ -14271,7 +14271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3716672133071695339, guid: 8273785e63e41e545b833c06d57d7480, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 45
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3716672133071695339, guid: 8273785e63e41e545b833c06d57d7480, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
